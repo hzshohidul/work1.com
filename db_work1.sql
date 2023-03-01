@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 22, 2023 at 07:53 PM
+-- Generation Time: Mar 01, 2023 at 08:53 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -428,8 +428,8 @@ CREATE TABLE `tbl_work` (
 
 INSERT INTO `tbl_work` (`id`, `icon`, `title`, `descrip`, `status`) VALUES
 (1, 'fa-youtube-play', 'Similique eos dolori', 'Molestias ut sapientMolestias ut sapientMolestias ut sapientMolestias ut sapientMolestias ut sapient', 0),
-(2, 'fa-gg', 'Qui ipsam modi volup', 'Velit provident la', 1),
-(5, 'fa-binoculars', 'Dicta cum reiciendis', 'Ullam fuga Elit ea', 1);
+(5, 'fa-binoculars', 'Dicta cum reiciendis', 'Ullam fuga Elit ea', 1),
+(6, 'fa-address-book', 'Iure ab tempora volu', 'Harum ex harum culpa', 1);
 
 -- --------------------------------------------------------
 
@@ -691,7 +691,7 @@ ALTER TABLE `tbl_users`
 -- AUTO_INCREMENT for table `tbl_work`
 --
 ALTER TABLE `tbl_work`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `tbl_work_title`
