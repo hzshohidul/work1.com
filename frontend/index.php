@@ -31,7 +31,6 @@
     //-----------------------------
     $select = "SELECT * FROM tbl_work WHERE status = 1";
     $select_work = mysqli_query($db_connection, $select);
-    $work_part = mysqli_fetch_assoc($select_work);
 
     $select = "SELECT * FROM tbl_work_title";
     $select_work_title = mysqli_query($db_connection, $select);
@@ -258,60 +257,19 @@
                         </div>
                     </div>
 					<div class="row">
+<?php
+    foreach($select_work AS $work_part){
+?>
 						<div class="col-lg-4 col-md-6">
 							<div class="icon_box_01 wow fadeInLeft" data-wow-delay="0.2s">
-                                <i class="fab fa-react"></i>
-								<h3>Creative Design</h3>
+                                <i class="fa <?= $work_part['icon'] ?>"></i>
+								<h3><?= $work_part['title'] ?></h3>
 								<p>
-									Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum indust.
+                                    <?= $work_part['descrip'] ?>
 								</p>
 							</div>
 						</div>
-						<div class="col-lg-4 col-md-6">
-							<div class="icon_box_01 wow fadeInLeft" data-wow-delay="0.4s">
-								<i class="fab fa-free-code-camp"></i>
-								<h3>Unlimited Features</h3>
-								<p>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum indust.
-								</p>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-6">
-							<div class="icon_box_01 wow fadeInLeft" data-wow-delay="0.6s">
-                                <i class="fal fa-desktop"></i>
-								<h3>Ultra Responsive</h3>
-								<p>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum indust.
-								</p>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-6">
-							<div class="icon_box_01 wow fadeInLeft" data-wow-delay="0.2s">
-                                <i class="fal fa-lightbulb-on"></i>
-								<h3>Creative Ideas</h3>
-								<p>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum indust.
-								</p>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-6">
-							<div class="icon_box_01 wow fadeInLeft" data-wow-delay="0.4s">
-                                <i class="fal fa-edit"></i>
-								<h3>Easy Customization</h3>
-								<p>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum indust.
-								</p>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-6">
-							<div class="icon_box_01 wow fadeInLeft" data-wow-delay="0.6s">
-                                <i class="fal fa-headset"></i>
-								<h3>Supper Support</h3>
-								<p>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum indust.
-								</p>
-							</div>
-						</div>
+<?php } ?>
 					</div>
 				</div>
 			</section>
